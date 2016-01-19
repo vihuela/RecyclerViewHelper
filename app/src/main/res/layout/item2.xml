@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/mainContent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_fuel_item"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="14dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/faveVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000"
+            android:textColor="@drawable/selector_text_fuel_item_b"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="售价 ￥"
+                android:textColor="@drawable/selector_text_fuel_item_n"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="192"
+                android:textColor="@drawable/selector_text_fuel_item_n"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.hadlink.recyclerviewhelpper.unrelated.LabelView_New
+        android:id="@+id/labelView"
+        lv_min_size="40dp"
+        xmlns:lv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        lv:lv_background_color="#FF552E"
+        lv:lv_fill_triangle="false"
+        lv:lv_gravity="TOP_RIGHT"
+        lv:lv_min_size="40dp"
+        lv:lv_padding="3dp"
+        lv:lv_text="96折"
+        lv:lv_text_size="10sp"/>
+</FrameLayout>
