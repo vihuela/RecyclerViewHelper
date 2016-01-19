@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * 为AdapterView和RecyclerView的item设置常见属性（链式编程）
+ * AdapterView and recyclerView normal setter func
  */
 public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickListener, CompoundButton.OnCheckedChangeListener {
     protected final SparseArray<View> mViews;
@@ -33,7 +33,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
 
     protected ViewGroup mAdapterView;
     /**
-     * 留着以后作为扩充对象
+     * be future
      */
     protected Object mObj;
 
@@ -70,64 +70,34 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
         mPosition = position;
     }
 
-    /**
-     * 设置item子控件点击事件监听器
-     *
-     * @param onItemChildClickListener
-     */
     void setOnItemChildClickListener(OnItemChildClickListener onItemChildClickListener) {
         mOnItemChildClickListener = onItemChildClickListener;
     }
 
-    /**
-     * 为id为viewId的item子控件设置点击事件监听器
-     *
-     * @param viewId
-     */
     public void setItemChildClickListener(int viewId) {
         View view = getView(viewId);
         /**
-         * 如果设置了多个item，可能item元素各不一致
+         * may be set mul item, subItem no equal
          */
         if (view != null) view.setOnClickListener(this);
     }
 
-    /**
-     * 设置item子控件长按事件监听器
-     *
-     * @param onItemChildLongClickListener
-     */
     void setOnItemChildLongClickListener(OnItemChildLongClickListener onItemChildLongClickListener) {
         mOnItemChildLongClickListener = onItemChildLongClickListener;
     }
 
-    /**
-     * 为id为viewId的item子控件设置长按事件监听器
-     *
-     * @param viewId
-     */
     public void setItemChildLongClickListener(int viewId) {
         View view = getView(viewId);
         /**
-         * 如果设置了多个item，可能item元素各不一致
+         * may be set mul item, subItem no equal
          */
         if (view != null) getView(viewId).setOnLongClickListener(this);
     }
 
-    /**
-     * 设置item子控件选中状态变化事件监听器
-     *
-     * @param onItemChildCheckedChangeListener
-     */
     void setOnItemChildCheckedChangeListener(OnItemChildCheckedChangeListener onItemChildCheckedChangeListener) {
         mOnItemChildCheckedChangeListener = onItemChildCheckedChangeListener;
     }
 
-    /**
-     * 为id为viewId的item子控件设置选中状态变化事件监听器
-     *
-     * @param viewId
-     */
     public void setItemChildCheckedChangeListener(@IdRes int viewId) {
         if (getView(viewId) instanceof CompoundButton) {
             ((CompoundButton) getView(viewId)).setOnCheckedChangeListener(this);
@@ -169,7 +139,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
     }
 
     /**
-     * 通过控件的Id获取对应的控件，如果没有则加入mViews，则从item根控件中查找并保存到mViews中
+     * get view by id,save to mViews
      *
      * @param viewId
      * @return
@@ -202,7 +172,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
     }
 
     /**
-     * 获取item的根控件
+     * get item rootView
      *
      * @return
      */
@@ -218,39 +188,18 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
         mObj = obj;
     }
 
-    /**
-     * 设置对应id的控件的文本内容
-     *
-     * @param viewId
-     * @param text
-     * @return
-     */
     public ViewHolderHelper setText(int viewId, String text) {
         TextView view = getView(viewId);
         view.setText(text);
         return this;
     }
 
-    /**
-     * 设置对应id的控件的文本内容
-     *
-     * @param viewId
-     * @param stringResId 字符串资源id
-     * @return
-     */
     public ViewHolderHelper setText(int viewId, @StringRes int stringResId) {
         TextView view = getView(viewId);
         view.setText(stringResId);
         return this;
     }
 
-    /**
-     * 设置对应id的控件的html文本内容
-     *
-     * @param viewId
-     * @param source html文本
-     * @return
-     */
     public ViewHolderHelper setHtml(int viewId, String source) {
         TextView view = getView(viewId);
         view.setText(Html.fromHtml(source));
@@ -258,7 +207,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
     }
 
     /**
-     * 设置对应id的控件是否选中
+     * which view checked
      *
      * @param viewId
      * @param checked
@@ -302,7 +251,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
 
     /**
      * @param viewId
-     * @param textColorResId 颜色资源id
+     * @param textColorResId textColorResId
      * @return
      */
     public ViewHolderHelper setTextColorRes(int viewId, @ColorRes int textColorResId) {
@@ -313,7 +262,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
 
     /**
      * @param viewId
-     * @param textColor 颜色值
+     * @param textColor textColor
      * @return
      */
     public ViewHolderHelper setTextColor(int viewId, int textColor) {
@@ -325,7 +274,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
 
     /**
      * @param viewId
-     * @param backgroundResId 背景资源id
+     * @param backgroundResId backgroundResId
      * @return
      */
     public ViewHolderHelper setBackgroundRes(int viewId, int backgroundResId) {
@@ -336,7 +285,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
 
     /**
      * @param viewId
-     * @param color  颜色值
+     * @param color  color
      * @return
      */
     public ViewHolderHelper setBackgroundColor(int viewId, int color) {
@@ -347,7 +296,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
 
     /**
      * @param viewId
-     * @param colorResId 颜色值资源id
+     * @param colorResId colorResId
      * @return
      */
     public ViewHolderHelper setBackgroundColorRes(int viewId, @ColorRes int colorResId) {
@@ -358,7 +307,7 @@ public class ViewHolderHelper implements View.OnClickListener, View.OnLongClickL
 
     /**
      * @param viewId
-     * @param imageResId 图像资源id
+     * @param imageResId imageResId
      * @return
      */
     public ViewHolderHelper setImageResource(int viewId, int imageResId) {

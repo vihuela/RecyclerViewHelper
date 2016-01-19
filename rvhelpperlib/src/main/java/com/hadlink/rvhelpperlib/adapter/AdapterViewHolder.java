@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * 适用于AdapterView的item的ViewHolder
+ * AdapterView item ViewHolder
  */
 public class AdapterViewHolder {
     protected View mConvertView;
@@ -19,7 +19,7 @@ public class AdapterViewHolder {
     }
 
     /**
-     * 拿到一个可重用的ViewHolder对象
+     * get Reuse ViewHolder
      *
      * @param convertView
      * @param parent

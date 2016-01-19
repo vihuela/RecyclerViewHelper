@@ -5,8 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * item的点击写于此
- * item的元素的点击写于ViewHolderHelper
+ * item click logic is here
+ * subItem click logic is ViewHolderHelper
  */
 public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 

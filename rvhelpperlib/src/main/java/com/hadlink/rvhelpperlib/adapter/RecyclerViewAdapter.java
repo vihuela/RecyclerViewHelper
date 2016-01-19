@@ -11,13 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 参考：https://github.com/bingoogolapple/BGAAdapter-Android
- * RecyclerView的适配器
  *
- * @param <M> 适配的数据类型
- * @author lyao
- * @apiNote item点击(长按)，继承此类后，外部设置 setOnRVItemClickListener();
- * item元素点击(长按)，继承此类后，请复写setItemChildListener,然后外部设置 setOnItemChildClickListener();
+ * RecyclerView adapter
+ *
+ * <p>item click(longClick)，extend this class，external invoke setOnRVItemClickListener();<br>
+ * subItem click(longCLick)，extend this class，override setItemChildListener,external invoke setOnItemChildClickListener();</p>
+ *
+ * @param <M> data type
+ * @author lyao inspiration from ：https://github.com/bingoogolapple/BGAAdapter-Android
  */
 public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<RecyclerViewHolder> {
     protected final int mItemLayoutId;
@@ -70,7 +71,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 根据getItemViewType()设置多个item
+     * by getItemViewType()set mul item
      *
      * @param viewType
      * @return
@@ -80,7 +81,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 为item的孩子节点设置监听器，并不是每一个数据列表都要为item的子控件添加事件监听器，所以这里采用了空实现，需要设置事件监听器时重写该方法即可
+     * subItem click or longClick empty imp
      *
      * @param viewHolderHelper
      */
@@ -93,7 +94,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 填充item数据
+     * fill datas
      *
      * @param viewHolderHelper
      * @param position
@@ -102,7 +103,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     protected abstract void fillData(ViewHolderHelper viewHolderHelper, int position, M model);
 
     /**
-     * 设置item的点击事件监听器
+     * item click lis
      *
      * @param onRVItemClickListener
      */
@@ -111,7 +112,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 设置item的长按事件监听器
+     * item longClick lis
      *
      * @param onRVItemLongClickListener
      */
@@ -120,7 +121,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 设置item中的子控件点击事件监听器
+     * subItem click lis(need adapter override setItemChildListener!!)
      *
      * @param onItemChildClickListener
      */
@@ -129,7 +130,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 设置item中的子控件长按事件监听器
+     * subItem longClick lis(need adapter override setItemChildListener!!)
      *
      * @param onItemChildLongClickListener
      */
@@ -138,7 +139,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 设置item子控件选中状态变化事件监听器
+     * subItem check lis(need adapter override setItemChildListener!!)
      *
      * @param onItemChildCheckedChangeListener
      */
@@ -151,7 +152,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 获取数据集合
+     * get Datas
      *
      * @return
      */
@@ -160,8 +161,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 设置全新的数据集合，如果传入null，则清空数据列表（第一次从服务器加载数据，或者下拉刷新当前界面数据表）
-     *
+     * set new datas,set null,clear all(first get datas for server or pull to refresh)
      * @param datas
      */
     public void setDatas(List<M> datas) {
@@ -174,8 +174,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 在集合头部添加新的数据集合（下拉从服务器获取最新的数据集合，例如新浪微博加载最新的几条微博数据）
-     *
+     * insert data to datas header(example weibo refresh same newly data)
      * @param datas
      */
     public void addNewDatas(List<M> datas) {
@@ -186,8 +185,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 在集合尾部添加更多数据集合（上拉从服务器获取更多的数据集合，例如新浪微博列表上拉加载更晚时间发布的微博数据）
-     *
+     * insert data to datas footer(example weibo loadmore same newly data)
      * @param datas
      */
     public void addMoreDatas(List<M> datas) {
@@ -198,7 +196,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 清空数据列表
+     * clear data
      */
     public void clear() {
         mDatas.clear();
@@ -206,7 +204,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 删除指定索引数据条目
+     * remove data for position
      *
      * @param position
      */
@@ -216,7 +214,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 删除指定数据条目
+     * remove data for obj
      *
      * @param model
      */
@@ -225,7 +223,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 在指定位置添加数据条目
+     * insert data for position
      *
      * @param position
      * @param model
@@ -236,7 +234,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 在集合头部添加数据条目
+     * insert data to header
      *
      * @param model
      */
@@ -245,7 +243,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 在集合末尾添加数据条目
+     * insert data to footer
      *
      * @param model
      */
@@ -254,7 +252,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 替换指定索引的数据条目
+     * replace data for position
      *
      * @param location
      * @param newModel
@@ -265,7 +263,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 替换指定数据条目
+     * replace data for obj
      *
      * @param oldModel
      * @param newModel
@@ -275,7 +273,7 @@ public abstract class RecyclerViewAdapter<M> extends RecyclerView.Adapter<Recycl
     }
 
     /**
-     * 移动数据条目的位置
+     * move item position
      *
      * @param fromPosition
      * @param toPosition

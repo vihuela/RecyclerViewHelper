@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 
 /**
  * @author Created by lyao on 2016/1/19.
- * @update
- * @description
  */
 public class WRGridLayoutManager extends GridLayoutManager {
 

@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'RecyclerViewHelpper'
+
+    publishedGroupId = 'com.hadlink'
+    libraryName = 'RecyclerViewHelpper'
+    artifact = 'rvhelpperlib'//lib module name
+
+    libraryDescription = 'The RecyclerViewHelpper contain more Convenience adapter、wrap-content layoutManager、common itemDecorate'
+
+    siteUrl = 'https://github.com/vihuela/RecyclerViewHelpper'
+    gitUrl = 'https://github.com/vihuela/RecyclerViewHelpper.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'vihuela'
+    developerName = 'lyao'
+    developerEmail = 'lomoliger@hotmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ['Apache-2.0']
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -21,3 +45,5 @@ android {
 dependencies {
     compile 'com.android.support:recyclerview-v7:23.1.1'
 }
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

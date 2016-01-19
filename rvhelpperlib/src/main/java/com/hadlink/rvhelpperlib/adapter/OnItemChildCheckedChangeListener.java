@@ -4,7 +4,7 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 
 /**
- * AdapterView和RecyclerView的item中子控件选中状态变化事件监听器
+ * for recyclerView and adapterView subItem
  */
 public interface OnItemChildCheckedChangeListener {
     void onItemChildCheckedChanged(ViewGroup parent, CompoundButton childView, int position, boolean isChecked);

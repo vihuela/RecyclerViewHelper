@@ -2,7 +2,7 @@
 <FrameLayout
     android:id="@+id/mainContent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="100dp"
     android:layout_height="wrap_content"
     android:background="@drawable/selector_fuel_item"
     >

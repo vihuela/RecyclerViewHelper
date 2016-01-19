@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * RecyclerView的item点击事件监听器
+ * for RecyclerView item
  */
 public interface OnRVItemClickListener {
     void onRVItemClick(ViewGroup parent, View itemView, int position);

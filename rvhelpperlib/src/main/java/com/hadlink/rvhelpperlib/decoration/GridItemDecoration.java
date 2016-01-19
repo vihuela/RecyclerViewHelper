@@ -6,8 +6,6 @@ import android.view.View;
 
 /**
  * @author Created by lyao on 2016/1/19.
- * @update
- * @description
  */
 public class GridItemDecoration extends RecyclerView.ItemDecoration {
     private int spanCount;
