@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
         beanList.add(new FuelBean("500", 93, "500加油卡"));
         beanList.add(new FuelBean("500", 93, "500加油卡"));
         beanList.add(new FuelBean("500", 93, "500加油卡"));
-        beanList.add(new FuelBean("500", 93, "500加油卡"));
-        rv.setLayoutManager(new WRGridLayoutManager(this, 3));
+//        beanList.add(new FuelBean("500", 93, "500加油卡"));
+        rv.setLayoutManager(new WRGridLayoutManager(this, 2));
         final FuelAdapter fuelAdapter = new FuelAdapter(rv, beanList);
         fuelAdapter.setOnRVItemClickListener(new OnRVItemClickListener() {
             @Override public void onRVItemClick(ViewGroup parent, View itemView, int position) {

@@ -100,7 +100,8 @@ public class WRGridLayoutManager extends GridLayoutManager {
                                    int heightSpec, int[] measuredDimension) {
         // See code at getViewForPosition(int, boolean) to see if/how this may be problematic.
         View view = recycler.getViewForPosition(position);
-        super.measureChildWithMargins(view, 0, 0);
+        // may be not use ...
+        /*super.measureChildWithMargins(view, 0, 0);*/
         itemDecorate = getDecoratedBottom(view);
 
         RecyclerView.LayoutParams p = (RecyclerView.LayoutParams) view.getLayoutParams();
