@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
         beanList.add(new FuelBean("10000", 98, "10000加油卡"));
         beanList.add(new FuelBean("500", 93, "500加油卡"));
         beanList.add(new FuelBean("500", 93, "500加油卡"));
-        beanList.add(new FuelBean("500", 93, "500加油卡"));
-        beanList.add(new FuelBean("500", 93, "500加油卡"));
+//        beanList.add(new FuelBean("500", 93, "500加油卡"));
+//        beanList.add(new FuelBean("500", 93, "500加油卡"));
 //        beanList.add(new FuelBean("500", 93, "500加油卡"));
         rv.setLayoutManager(new WRGridLayoutManager(this, 2));
         final FuelAdapter fuelAdapter = new FuelAdapter(rv, beanList);
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 fuelAdapter.setSelectItem(position, null);
             }
         });
-        rv.addItemDecoration(new GridItemDecoration(2, DensityUtils.dip2px(this, 10f), true));
+        rv.addItemDecoration(new GridItemDecoration(2, DensityUtils.dip2px(this, 0f), true));
         /*rv.addItemDecoration(new CommonItemDecoration(DensityUtils.dip2px(this, 14f)));*/
         rv.setAdapter(fuelAdapter);
     }
