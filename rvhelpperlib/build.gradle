@@ -33,7 +33,7 @@ ext {
     siteUrl = 'https://github.com/vihuela/RecyclerViewHelpper'
     gitUrl = 'https://github.com/vihuela/RecyclerViewHelpper.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'vihuela'
     developerName = 'lyao'

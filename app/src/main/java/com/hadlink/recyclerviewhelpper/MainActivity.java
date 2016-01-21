@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*demo1();*/
+        demo1();
 
-        demo2();
+        /*demo2();*/
 
 
     }
@@ -68,10 +68,6 @@ public class MainActivity extends AppCompatActivity {
         beanList.add(new FuelBean("100", 94, "100加油卡"));
         beanList.add(new FuelBean("10000", 98, "10000加油卡"));
         beanList.add(new FuelBean("500", 93, "500加油卡"));
-        beanList.add(new FuelBean("500", 93, "500加油卡"));
-//        beanList.add(new FuelBean("500", 93, "500加油卡"));
-//        beanList.add(new FuelBean("500", 93, "500加油卡"));
-//        beanList.add(new FuelBean("500", 93, "500加油卡"));
         rv.setLayoutManager(new WRGridLayoutManager(this, 2));
         final FuelAdapter fuelAdapter = new FuelAdapter(rv, beanList);
         fuelAdapter.setOnRVItemClickListener(new OnRVItemClickListener() {
@@ -80,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         rv.addItemDecoration(new GridItemDecoration(2, DensityUtils.dip2px(this, 0f), true));
-        /*rv.addItemDecoration(new CommonItemDecoration(DensityUtils.dip2px(this, 14f)));*/
         rv.setAdapter(fuelAdapter);
     }
 
