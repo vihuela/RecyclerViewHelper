@@ -59,7 +59,6 @@ public class WRLinearLayoutManager extends android.support.v7.widget.LinearLayou
                 }
             } else {
                 height = height + mMeasuredDimension[1];
-                System.out.println("mMeasuredDimension[0]:" + mMeasuredDimension[0] + " width:" + width);
                 if (i == 0) {
                     width = mMeasuredDimension[0];
                 }
