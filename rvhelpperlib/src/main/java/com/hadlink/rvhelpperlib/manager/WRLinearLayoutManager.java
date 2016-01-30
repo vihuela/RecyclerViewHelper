@@ -59,33 +59,28 @@ public class WRLinearLayoutManager extends android.support.v7.widget.LinearLayou
                 }
             } else {
                 height = height + mMeasuredDimension[1];
+                System.out.println("mMeasuredDimension[0]:" + mMeasuredDimension[0] + " width:" + width);
                 if (i == 0) {
                     width = mMeasuredDimension[0];
                 }
             }
         }
 
-        // If child view is more than screen size, there is no need to make it wrap content. We can use original onMeasure() so we can scroll view.
-        if (height < heightSize && width < widthSize) {
-
-            switch (widthMode) {
-                case View.MeasureSpec.EXACTLY:
-                    width = widthSize;
-                case View.MeasureSpec.AT_MOST:
-                case View.MeasureSpec.UNSPECIFIED:
-            }
-
-            switch (heightMode) {
-                case View.MeasureSpec.EXACTLY:
-                    height = heightSize;
-                case View.MeasureSpec.AT_MOST:
-                case View.MeasureSpec.UNSPECIFIED:
-            }
-
-            setMeasuredDimension(width, height);
-        } else {
-            super.onMeasure(recycler, state, widthSpec, heightSpec);
+        switch (widthMode) {
+            case View.MeasureSpec.EXACTLY:
+                width = widthSize;
+            case View.MeasureSpec.AT_MOST:
+            case View.MeasureSpec.UNSPECIFIED:
         }
+
+        switch (heightMode) {
+            case View.MeasureSpec.EXACTLY:
+                height = heightSize;
+            case View.MeasureSpec.AT_MOST:
+            case View.MeasureSpec.UNSPECIFIED:
+        }
+
+        setMeasuredDimension(width, height);
     }
 
     private void measureScrapChild(RecyclerView.Recycler recycler, int position, int widthSpec,
@@ -103,8 +98,8 @@ public class WRLinearLayoutManager extends android.support.v7.widget.LinearLayou
         view.measure(childWidthSpec, childHeightSpec);
 
         // Get decorated measurements
-        measuredDimension[0] = getDecoratedMeasuredWidth(view) + p.leftMargin + p.rightMargin;
-        measuredDimension[1] = getDecoratedMeasuredHeight(view) + p.bottomMargin + p.topMargin;
+        measuredDimension[0] = getDecoratedMeasuredWidth(view);
+        measuredDimension[1] = getDecoratedMeasuredHeight(view);
         recycler.recycleView(view);
     }
 

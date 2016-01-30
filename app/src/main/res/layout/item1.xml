@@ -23,13 +23,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@drawable/selector_fuel_item"
-    android:layout_height="wrap_content">
+    android:layout_height="100dp">
 
     <TextView
+        android:layout_gravity="center"
         android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="14dp"
-        android:text="asajk"
+        android:text="4"
         />
 </FrameLayout>
