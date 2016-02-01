@@ -28,18 +28,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hadlink.recyclerviewhelpper.unrelated.DataEngine;
 import com.hadlink.recyclerviewhelpper.unrelated.FuelAdapter;
 import com.hadlink.recyclerviewhelpper.unrelated.FuelBean;
 import com.hadlink.rvhelpperlib.adapter.OnRVItemClickListener;
 import com.hadlink.rvhelpperlib.adapter.RecyclerViewAdapter;
 import com.hadlink.rvhelpperlib.adapter.ViewHolderHelper;
+import com.hadlink.rvhelpperlib.decoration.CommonItemDecoration;
 import com.hadlink.rvhelpperlib.decoration.GridItemDecoration;
 import com.hadlink.rvhelpperlib.manager.WRGridLayoutManager;
-import com.hadlink.rvhelpperlib.manager.WRLinearLayoutManager;
+import com.hadlink.rvhelpperlib.manager.WRLinearLayoutManagerT;
 import com.hadlink.rvhelpperlib.utils.DensityUtils;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -79,14 +80,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void demo1() {
-        List<String> strings = new ArrayList<>();
-        Collections.addAll(strings, "11", "22", "33", "44");
-        /*rv.addItemDecoration(new CommonItemDecoration(14));*/
-        rv.setLayoutManager(new WRLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        rv.setAdapter(new RecyclerViewAdapter<String>(rv, R.layout.item1, strings) {
+        rv.addItemDecoration(new CommonItemDecoration(50));
+        rv.setLayoutManager(new WRLinearLayoutManagerT(this, LinearLayoutManager.VERTICAL, false));
+        rv.setAdapter(new RecyclerViewAdapter<String>(rv, R.layout.item1, DataEngine.S_MOCK1) {
 
             @Override protected void fillData(ViewHolderHelper viewHolderHelper, int position, String model) {
-                /*viewHolderHelper.setText(R.id.tv, model);*/
+                viewHolderHelper.setText(R.id.tv, model);
             }
         });
     }

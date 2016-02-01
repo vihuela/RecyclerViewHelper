@@ -44,4 +44,4 @@ CHECK DEMO FOR DETAIL
 
 ## GRADLE ##
 
-compile 'com.hadlink:rvhelpperlib:1.0.1'
+compile 'com.hadlink:rvhelpperlib:latestVersion@aar'
