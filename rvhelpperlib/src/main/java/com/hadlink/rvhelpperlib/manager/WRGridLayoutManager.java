@@ -115,8 +115,4 @@ public class WRGridLayoutManager extends GridLayoutManager {
         recycler.recycleView(view);
     }
 
-    @Override public boolean canScrollVertically() {
-        return false;
-    }
-
 }

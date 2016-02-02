@@ -26,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
+ *  wrap content require item height must equal
  * @author Created by lyao on 2016/1/19.
  *         wrap content's rv
  */
@@ -102,7 +103,4 @@ public class WRLinearLayoutManager extends android.support.v7.widget.LinearLayou
         recycler.recycleView(view);
     }
 
-    @Override public boolean canScrollVertically() {
-        return false;
-    }
 }

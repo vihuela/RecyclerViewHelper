@@ -34,10 +34,9 @@ import com.hadlink.recyclerviewhelpper.unrelated.FuelBean;
 import com.hadlink.rvhelpperlib.adapter.OnRVItemClickListener;
 import com.hadlink.rvhelpperlib.adapter.RecyclerViewAdapter;
 import com.hadlink.rvhelpperlib.adapter.ViewHolderHelper;
-import com.hadlink.rvhelpperlib.decoration.CommonItemDecoration;
 import com.hadlink.rvhelpperlib.decoration.GridItemDecoration;
 import com.hadlink.rvhelpperlib.manager.WRGridLayoutManager;
-import com.hadlink.rvhelpperlib.manager.WRLinearLayoutManagerT;
+import com.hadlink.rvhelpperlib.manager.WRLinearLayoutManager;
 import com.hadlink.rvhelpperlib.utils.DensityUtils;
 
 import java.util.ArrayList;
@@ -80,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void demo1() {
-        rv.addItemDecoration(new CommonItemDecoration(50));
-        rv.setLayoutManager(new WRLinearLayoutManagerT(this, LinearLayoutManager.VERTICAL, false));
+        rv.setLayoutManager(new WRLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         rv.setAdapter(new RecyclerViewAdapter<String>(rv, R.layout.item1, DataEngine.S_MOCK1) {
 
             @Override protected void fillData(ViewHolderHelper viewHolderHelper, int position, String model) {
