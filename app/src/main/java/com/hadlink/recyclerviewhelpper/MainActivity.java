@@ -26,6 +26,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.hadlink.recyclerviewhelpper.aty.GridViewAty;
+import com.hadlink.recyclerviewhelpper.aty.ListViewAty;
+import com.hadlink.recyclerviewhelpper.aty.RecyclerViewAty;
+import com.hadlink.recyclerviewhelpper.aty.RecyclerViewMulAty;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -48,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void lv(View v) {
         startActivity(new Intent(this, ListViewAty.class));
+    }
+
+    public void gv(View v) {
+        startActivity(new Intent(this, GridViewAty.class));
     }
 
 

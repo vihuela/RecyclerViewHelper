@@ -20,17 +20,23 @@
   -->
 
 <FrameLayout
+    android:id="@+id/rootView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="14dp"
-    android:id="@+id/rootView"
-    android:background="@drawable/selector_fuel_item">
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:fitsSystemWindows="true"
+    >
 
-    <TextView
-        android:id="@+id/tv"
+    <GridView
+        android:id="@+id/gv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="4"
-        />
+        android:background="@android:color/white"
+        android:divider="@null"
+        android:horizontalSpacing="14dp"
+        android:listSelector="@null"
+        android:numColumns="2"
+        android:verticalSpacing="14dp"/>
+
 </FrameLayout>

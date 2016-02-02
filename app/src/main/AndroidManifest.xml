@@ -39,9 +39,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ListViewAty"/>
-        <activity android:name=".RecyclerViewAty"/>
-        <activity android:name=".RecyclerViewMulAty"/>
+        <activity android:name=".aty.ListViewAty"/>
+        <activity android:name=".aty.RecyclerViewAty"/>
+        <activity android:name=".aty.RecyclerViewMulAty"/>
+        <activity android:name=".aty.GridViewAty"/>
 
     </application>
 

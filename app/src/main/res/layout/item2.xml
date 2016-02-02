@@ -18,6 +18,12 @@
   ~   limitations under the License.
   ~  */
   -->
+<!--gridView need chance bg need parent-->
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
 <FrameLayout
     android:id="@+id/mainContent"
@@ -84,4 +90,5 @@
         lv:lv_padding="3dp"
         lv:lv_text="96折"
         lv:lv_text_size="10sp"/>
+</FrameLayout>
 </FrameLayout>

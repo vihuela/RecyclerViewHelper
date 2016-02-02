@@ -18,7 +18,7 @@
  *
  */
 
-package com.hadlink.recyclerviewhelpper;
+package com.hadlink.recyclerviewhelpper.aty;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +27,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.hadlink.recyclerviewhelpper.R;
 import com.hadlink.recyclerviewhelpper.unrelated.DataEngine;
 import com.hadlink.rvhelpperlib.adapter.AdapterViewAdapter;
 import com.hadlink.rvhelpperlib.adapter.OnItemChildClickListener;
