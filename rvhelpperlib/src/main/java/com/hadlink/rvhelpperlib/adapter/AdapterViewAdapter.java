@@ -30,7 +30,6 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- *
  * AdapterView adapter
  *
  * @param <M> bean
@@ -48,6 +47,12 @@ public abstract class AdapterViewAdapter<M> extends BaseAdapter {
         mContext = context;
         mItemLayoutId = itemLayoutId;
         mDatas = new ArrayList<>();
+    }
+
+    public AdapterViewAdapter(Context context, int itemLayoutId, List<M> list) {
+        mContext = context;
+        mItemLayoutId = itemLayoutId;
+        mDatas = list;
     }
 
     @Override

@@ -22,6 +22,15 @@ package com.hadlink.recyclerviewhelpper;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.hadlink.recyclerviewhelpper.unrelated.DataEngine;
+import com.hadlink.rvhelpperlib.adapter.AdapterViewAdapter;
+import com.hadlink.rvhelpperlib.adapter.OnItemChildClickListener;
+import com.hadlink.rvhelpperlib.adapter.ViewHolderHelper;
 
 /**
  * @author Created by lyao on 2016/2/1.
@@ -30,5 +39,25 @@ import android.support.v7.app.AppCompatActivity;
 public class ListViewAty extends AppCompatActivity {
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_lv);
+
+        ListView lv = (ListView) findViewById(R.id.lv);
+        final AdapterViewAdapter<String> adapter = new AdapterViewAdapter<String>(this, R.layout.item1, DataEngine.S_MOCK1) {
+
+            @Override protected void fillData(ViewHolderHelper viewHolderHelper, int position, String model) {
+                viewHolderHelper.setText(R.id.tv, model);
+            }
+
+            @Override protected void setItemChildListener(ViewHolderHelper viewHolderHelper) {
+                viewHolderHelper.setItemChildClickListener(R.id.rootView);
+            }
+        };
+        adapter.setOnItemChildClickListener(new OnItemChildClickListener() {
+            @Override public void onItemChildClick(ViewGroup parent, View childView, int position) {
+                if (childView.getId() == R.id.rootView)
+                    Toast.makeText(parent.getContext(), adapter.getItem(position), Toast.LENGTH_SHORT).show();
+            }
+        });
+        lv.setAdapter(adapter);
     }
 }

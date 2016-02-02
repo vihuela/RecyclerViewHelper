@@ -40,8 +40,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListViewAty"/>
-        <activity android:name=".RvGridLayoutAtyForContentWrapper"/>
-        <activity android:name=".RvLinerLayoutAtyForContentWrapper"/>
+        <activity android:name=".RecyclerViewAty"/>
+        <activity android:name=".RecyclerViewMulAty"/>
 
     </application>
 

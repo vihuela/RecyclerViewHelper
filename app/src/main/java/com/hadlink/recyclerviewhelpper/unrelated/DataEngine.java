@@ -30,33 +30,85 @@ import java.util.List;
  */
 public class DataEngine {
     public static List<String> S_MOCK1 = new ArrayList<>();
+    public static List<String> S_MOCK2 = new ArrayList<>();
+    public static List<Object> S_MOCK3 = new ArrayList<>();
+    public static List<FuelBean> S_MOCK4 = new ArrayList<>();
 
     static {
         Collections.addAll(S_MOCK1,
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
-                "RecyclerView",
+                "item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1item1",
+                "item2",
+                "item3",
+                "item4",
+                "WRAP-CONTENT");
+        Collections.addAll(S_MOCK2,
                 "RecyclerView",
                 "RecyclerView",
                 "RecyclerView",
                 "Height",
                 "WRAP-CONTENT");
+
+        S_MOCK4.add(new FuelBean("1000", 96, "1000加油卡"));
+        S_MOCK4.add(new FuelBean("100", 94, "100加油卡"));
+        S_MOCK4.add(new FuelBean("10000", 98, "10000加油卡"));
+        S_MOCK4.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK4.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK4.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK4.add(new FuelBean("500", 93, "500加油卡"));
+
+        S_MOCK3.add(new FuelBean("1000", 96, "1000加油卡"));
+        S_MOCK3.add("1000加油卡");
+        S_MOCK3.add(new FuelBean("100", 94, "100加油卡"));
+        S_MOCK3.add("100加油卡");
+        S_MOCK3.add(new FuelBean("10000", 98, "10000加油卡"));
+        S_MOCK3.add("10000加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
+        S_MOCK3.add(new FuelBean("500", 93, "500加油卡"));
+        S_MOCK3.add("500加油卡");
     }
 }

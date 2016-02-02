@@ -22,16 +22,16 @@
 <FrameLayout
     android:id="@+id/mainContent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="100dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/selector_fuel_item"
     >
 
     <LinearLayout
+        android:padding="14dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="14dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -45,6 +45,7 @@
             android:textStyle="bold"/>
 
         <LinearLayout
+            android:id="@+id/priceLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"

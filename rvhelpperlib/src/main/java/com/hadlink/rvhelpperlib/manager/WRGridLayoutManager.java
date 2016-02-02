@@ -32,9 +32,19 @@ import android.view.ViewGroup;
 public class WRGridLayoutManager extends GridLayoutManager {
 
     private int itemDecorate;
+    private boolean mayFix = true;
 
     public WRGridLayoutManager(Context context, int spanCount) {
         super(context, spanCount);
+    }
+
+    /**
+     * someTime need mayFix，i don't know when happen
+     *
+     * @param mayFix true or false
+     */
+    public void setFixHeight(boolean mayFix) {
+        this.mayFix = mayFix;
     }
 
     @Override
@@ -101,7 +111,7 @@ public class WRGridLayoutManager extends GridLayoutManager {
         // See code at getViewForPosition(int, boolean) to see if/how this may be problematic.
         View view = recycler.getViewForPosition(position);
         // may be not use ...
-        /*super.measureChildWithMargins(view, 0, 0);*/
+        if (mayFix) super.measureChildWithMargins(view, 0, 0);
         itemDecorate = getDecoratedBottom(view);
 
         RecyclerView.LayoutParams p = (RecyclerView.LayoutParams) view.getLayoutParams();
