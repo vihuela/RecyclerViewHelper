@@ -10,7 +10,7 @@
 - CommonItemDecoration for RecyclerView
 
 
-
+![image](https://github.com/vihuela/RecyclerViewHelpper/blob/master/example.gif ) 
 
 ----------
 
