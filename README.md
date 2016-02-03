@@ -10,6 +10,16 @@
 - CommonItemDecoration for RecyclerView
 
 
+----------
+## Adding to your project ##
+
+Add this to your dependencies:
+
+    compile 'com.hadlink:rvhelpperlib:1.0.2'
+
+
+----------
+
 ![image](https://github.com/vihuela/RecyclerViewHelpper/blob/master/example.gif ) 
 
 ----------
@@ -159,8 +169,5 @@
 ##CHECK DEMO FOR DETAIL
 
 
-## GRADLE ##
-
-compile 'com.hadlink:rvhelpperlib:1.0.2'
 
 
