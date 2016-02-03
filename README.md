@@ -1,6 +1,11 @@
+RecyclerViewHelpper
+--------
+![Bintray](http://i.imgur.com/ohkyaD6.png)
 
+Android library project that intends to simplify the usage of Adapters for ListView/GridView and RecyclerView. You won't have to code any boring adapter again!
 
-## FEATURE ##
+It helps to keep boilerplate to a minimum and adds the possibility of easily changing between BaseAdapter / RecyclerView.Adapter adapter styles without changing any code. It also allows painless usage of multiple models / view types for the same list or grid
+## Feature ##
 - adapter for RecyclerView & AdapterView
 
 
@@ -23,7 +28,7 @@ Add this to your dependencies:
 ![image](https://github.com/vihuela/RecyclerViewHelpper/blob/master/example.gif ) 
 
 ----------
-
+## Code ##
 
 > RecyclerView **SingleItem** 单个条目
 
@@ -166,8 +171,28 @@ Add this to your dependencies:
 
     
 
-##CHECK DEMO FOR DETAIL
+
+
+> **Check Demo for Detail**
 
 
 
+
+Common issues
+-------------
+
+RecyclerView item height must be Consistency for wrap-centent in linerLayoutManager
+
+Contributing
+------------
+Forks, patches and other feedback are welcome.
+
+Creators
+--------
+
+vihuela - Github [@vihuela](https://github.com/vihuela) 
+License
+-------
+
+[MIT License](LICENSE)
 
