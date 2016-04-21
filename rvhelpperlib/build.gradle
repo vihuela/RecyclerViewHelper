@@ -33,7 +33,7 @@ ext {
     siteUrl = 'https://github.com/vihuela/RecyclerViewHelpper'
     gitUrl = 'https://github.com/vihuela/RecyclerViewHelpper.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.3'
 
     developerId = 'vihuela'
     developerName = 'lyao'
@@ -63,7 +63,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
 }
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

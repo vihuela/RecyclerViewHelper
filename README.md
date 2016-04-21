@@ -20,7 +20,7 @@ It helps to keep boilerplate to a minimum and adds the possibility of easily cha
 
 Add this to your dependencies:
 
-    compile 'com.hadlink:rvhelpperlib:1.0.2'
+    compile 'com.hadlink:rvhelpperlib:1.0.3'
 
 
 ----------
